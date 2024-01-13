@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Converter App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="head">
+            <h1>Number System Converter App</h1>
+        </div>
+
+        <div class="Input">
+            <form action="/word" method="post">
+                <div class="custom-select">
+                    <label for="wordInput">Select a Base</label>
+                    <select id="enteredWordOutput" name="myDropdown" class="SelectedUnit">
+                        <option value="option0">Select</option>
+                        <option value="option1">Decimal</option>
+                        <option value="option2">Binary</option>
+                        <option value="option3">Octal</option>
+                        <option value="option4">Hexadecimal</option>
+                        <option value="option5">Base 24</option>
+                        <option value="option7">base 2</option>
+                        <option value="option8">base 3</option>
+                        <option value="option9">base 4</option>
+                        <option value="option10">base 5</option>
+                        <option value="option11">base 6</option>
+                        <option value="option12">base 7</option>
+                        <option value="option13">base 8</option>
+                        <option value="option14">base 9</option>
+                        <option value="option15">base 10</option>
+                        <option value="option16">base 11</option>
+                        <option value="option17">base 12</option>
+                        <option value="option18">base 13</option>
+                        <option value="option19">base 14</option>
+                        <option value="option20">base 15</option>
+                        <option value="option21">base 16</option>
+                    </select>
+                    <br>
+                </div>
+                <div class="SImain">
+                    <label for="wordInput">Enter the value</label>
+                    <div class="SIunit">
+                        <input type="text" name="word" value="{{word}}" class="SIinput" id="inputvalue" oninput="validate(this)">
+                    </div>
+                </div>
+            </form>
+
+            <div>
+                <label for="wordInput">Select in which base you want to convert</label>
+                <select id="outputunit" name="myDropdown" class="SIdrop All">
+                    <option value="option0">All</option>
+                    <option value="option1">Decimal</option>
+                    <option value="option2">Binary</option>
+                    <option value="option3">Octal</option>
+                    <option value="option4">Hexadecimal</option>
+                    <option value="option5">Base 24</option>
+                    <option value="option7">base 2</option>
+                    <option value="option8">base 3</option>
+                    <option value="option9">base 4</option>
+                    <option value="option10">base 5</option>
+                    <option value="option11">base 6</option>
+                    <option value="option12">base 7</option>
+                    <option value="option13">base 8</option>
+                    <option value="option14">base 9</option>
+                    <option value="option15">base 10</option>
+                    <option value="option16">base 11</option>
+                    <option value="option17">base 12</option>
+                    <option value="option18">base 13</option>
+                    <option value="option19">base 14</option>
+                    <option value="option20">base 15</option>
+                    <option value="option21">base 16</option>
+                </select>
+                <br>
+            </div>
+            {{!-- <br><br> --}}
+            <input type="submit" value="Reset" onclick="reset()">
+            <input type="submit" value="Calculate" id="Calculate">
+        </div>
+        <div class="Output">
+            <div id="outputdisplay">
+                <label for="category" style="margin-bottom: 10px;">Converted Base Output</label>
+                <div id="categoryOutput">
+                    Output will be displayed Here
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
